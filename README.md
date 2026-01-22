@@ -1,4 +1,5 @@
 make sure to trauncte the vote table before starting new election 
+
 Query :
 	truncate table vote;
 and then set the vote count to 0 and has_voted as false to avoid the transaprancy while voting.
