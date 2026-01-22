@@ -1,0 +1,371 @@
+{
+  "info": {
+    "_postman_id": "e6fd4a6f-0854-4259-a21c-4ed8dd28015b",
+    "name": "Voting Application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51350344",
+    "_collection_link": "https://go.postman.co/collection/51350344-e6fd4a6f-0854-4259-a21c-4ed8dd28015b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Voter",
+      "item": [
+        {
+          "name": "Register voter",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"voterName\":\"Abhi Shinde\",\r\n    \"voterEmail\":\"abhishinde393@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/voter/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "voter",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all voter",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"VoterName\":\"Suraj Jadhav\",\r\n    \"VoterEmail\":\"jsuraj395@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/voter/all",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "voter",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get voter by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"VoterName\":\"Suraj Jadhav\",\r\n    \"VoterEmail\":\"jsuraj395@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/voter/all",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "voter",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update voter",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"voterName\":\"Suraj Jadhav\",\r\n    \"voterEmail\":\"jsuraj394@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/voter/update/1",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "voter",
+                "update",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Candidate",
+      "item": [
+        {
+          "name": "Register Candidate",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"candidateName\":\"Abhi Shinde\",\r\n    \"party\":\"Shiv-Sena\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/candidate/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "candidate",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllCandidate",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/candidate/getAllCandidates",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "candidate",
+                "getAllCandidates"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCandidateById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/candidate/getCandidateById/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "candidate",
+                "getCandidateById",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update candidate",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"candidateName\": \"Rahul Gandi\",\r\n    \"party\": \"Congress\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/candidate/updateCandidate/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "candidate",
+                "updateCandidate",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update candidate Copy",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"candidateName\": \"Rahul Gandi\",\r\n    \"party\": \"Congress\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/candidate/deleteCandidate/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "candidate",
+                "deleteCandidate",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Voting",
+      "item": [
+        {
+          "name": "Cast Voting",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"voterId\":\"2\",\r\n    \"candidateId\":\"2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/votes/castVote",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "votes",
+                "castVote"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Votes",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"voterId\":\"2\",\r\n    \"candidateId\":\"2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/votes/getAllVotes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "votes",
+                "getAllVotes"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Election_Result",
+      "item": [
+        {
+          "name": "get all results",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Declare Election Results",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
